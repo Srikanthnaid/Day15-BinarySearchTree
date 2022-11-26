@@ -39,6 +39,18 @@ public class BinaryTree {
 
 	}
 
+	public boolean search(Node root, int val) {
+		if (root == null) {
+			return false;
+		}
+		if (val < root.data) {
+			return search(root.left, val);
+		} else if (root.data == val) {
+			return true;
+		} else {
+			return search(root.right, val);
+		}
+	}
 
 	public static void main(String[] args) {
 		System.out.println("welcome to BTS program");
@@ -59,6 +71,10 @@ public class BinaryTree {
 		root = bst.insert(root, 63);
 		root = bst.insert(root, 67);
 		bst.print(root);
+		if (bst.search(root, 63))
+			System.out.println("\n\tElement is found in the binary tree");
+		else
+			System.out.println("\n\tElement is not found in the binary tree");
 
 	}
 
