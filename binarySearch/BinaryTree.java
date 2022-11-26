@@ -42,7 +42,7 @@ public class BinaryTree {
 		root = bst.insert(root, 56);
 		root = bst.insert(root, 30);
 		root = bst.insert(root, 70);
-		
+		bst.print(root); // output-> 30->56->70
 
 	}
 }
